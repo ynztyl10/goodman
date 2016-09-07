@@ -28,15 +28,17 @@ class ProxyHandler(web.RequestHandler):
 
     def post(self):
         self.set_crx_headers()
-        logger.debug(self.request.body)
         if not self.request.body:
+            logger.warning("request body is null!")
             self.return_err(PARAMS_NULL)
         data = self.get_argument('data','')
         if not data:
+            logger.warning("data params is null!")
             self.return_err(PARAMS_NULL)
         data_json = escape.json_decode(data)
         check_res = self.params_check(data_json,['config','action'])
         if not check_res:
+            logger.warning("config or action params is null!")
             self.return_err(PARAMS_NULL)
         config = data_json['config']
         action = data_json['action']
@@ -44,10 +46,12 @@ class ProxyHandler(web.RequestHandler):
             agent_ctrl = AgentCtrl(config)
             res = agent_ctrl.process(action)
             if not res:
+                logger.warning("res is false!")
                 self.return_err(PARAMS_NULL)
             res = {"errno" : SUCCESS,"data": res}
             return self.write(json.dumps((res),default=json_util.default))
         except UnSupportedEngineException,e:
+            logger.warning(e)
             self.return_err(ENGINE_NOT_SUPPORT)
         
 
