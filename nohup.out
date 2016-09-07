@@ -1,0 +1,31 @@
+22265:C 05 Sep 17:35:55.315 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+22265:M 05 Sep 17:35:55.317 * Increased maximum number of open files to 10032 (it was originally set to 7168).
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.0.4 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 22265
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+22265:M 05 Sep 17:35:55.319 # Server started, Redis version 3.0.4
+22265:M 05 Sep 17:35:55.319 * DB loaded from disk: 0.000 seconds
+22265:M 05 Sep 17:35:55.319 * The server is now ready to accept connections on port 6379
+22265:M 05 Sep 18:35:56.008 * 1 changes in 3600 seconds. Saving...
+22265:M 05 Sep 18:35:56.020 * Background saving started by pid 25850
+25850:C 05 Sep 18:35:56.025 * DB saved on disk
+22265:M 05 Sep 18:35:56.122 * Background saving terminated with success
+22265:M 05 Sep 19:35:57.023 * 1 changes in 3600 seconds. Saving...
+22265:M 05 Sep 19:35:57.033 * Background saving started by pid 26878
+26878:C 05 Sep 19:35:57.041 * DB saved on disk
+22265:M 05 Sep 19:35:57.136 * Background saving terminated with success

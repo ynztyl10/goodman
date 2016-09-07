@@ -1,0 +1,702 @@
+09-02 18:25:02 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Content-Length': '103', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Accept': '*/*', 'User-Agent': 'python-requests/2.10.0', 'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+TypeError: post() takes no arguments (1 given)
+09-02 18:25:02 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 21.90ms
+09-02 18:25:24 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:26:06 tornado.general WARNING web.py log_exception 1523 400 POST /proxy (127.0.0.1): Missing argument command
+09-02 18:26:06 tornado.access WARNING web.py log_request 1948 400 POST /proxy (127.0.0.1) 12.38ms
+09-02 18:26:51 tornado.general WARNING web.py log_exception 1523 400 POST /proxy (127.0.0.1): Missing argument config
+09-02 18:26:51 tornado.access WARNING web.py log_request 1948 400 POST /proxy (127.0.0.1) 1.00ms
+09-02 18:27:30 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:27:38 tornado.general WARNING web.py log_exception 1523 400 POST /proxy (127.0.0.1): Missing argument config
+09-02 18:27:38 tornado.access WARNING web.py log_request 1948 400 POST /proxy (127.0.0.1) 7.08ms
+09-02 18:27:55 tornado.general WARNING web.py log_exception 1523 400 POST /proxy (127.0.0.1): Missing argument config
+09-02 18:27:55 tornado.access WARNING web.py log_request 1948 400 POST /proxy (127.0.0.1) 1.35ms
+09-02 18:29:25 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:29:30 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:29:37 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 1.39ms
+09-02 18:29:50 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Content-Length': '103', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Accept': '*/*', 'User-Agent': 'python-requests/2.10.0', 'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 21, in post
+    request_data = json.loads(self.request.body)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-02 18:29:50 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 9.75ms
+09-02 18:30:14 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:30:19 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 3.90ms
+09-02 18:30:37 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 1.45ms
+09-02 18:31:00 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:31:04 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 21 {"engine": "mysql", "action": {"data": "select id from testdb where 1=1 and t=1 limit1", "command": "select"}, "config": {"passwd": "root", "host": "127.0.0.1", "schema": "testdb", "port": "3306", "user": "root"}}
+09-02 18:31:04 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 1.44ms
+09-02 18:33:36 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:36:38 tornado.general WARNING web.py log_exception 1523 400 POST /proxy (127.0.0.1): Missing argument config
+09-02 18:36:38 tornado.access WARNING web.py log_request 1948 400 POST /proxy (127.0.0.1) 9.03ms
+09-02 18:37:07 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:37:13 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 20 {"engine": "mysql", "action": {"data": "select id from testdb where 1=1 and t=1 limit1", "command": "select"}, "config": {"passwd": "root", "host": "127.0.0.1", "schema": "testdb", "port": "3306", "user": "root"}}
+09-02 18:37:13 tornado.general WARNING web.py log_exception 1523 400 POST /proxy (127.0.0.1): Missing argument config
+09-02 18:37:13 tornado.access WARNING web.py log_request 1948 400 POST /proxy (127.0.0.1) 7.31ms
+09-02 18:54:44 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:55:08 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 18:55:14 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 20 {"engine": "mysql", "action": {"data": "select id from testdb where 1=1 and t=1 limit1", "command": "select"}, "config": {"passwd": "root", "host": "127.0.0.1", "schema": "testdb", "port": "3306", "user": "root"}}
+09-02 18:55:14 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 {u'passwd': u'root', u'host': u'127.0.0.1', u'user': u'root', u'port': u'3306', u'schema': u'testdb'}
+09-02 18:55:14 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 15.51ms
+09-02 18:58:17 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-02 19:00:17 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-03 21:48:24 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 09:46:44 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 14:29:19 tornado.access WARNING web.py log_request 1948 404 GET / (127.0.0.1) 8.92ms
+09-05 14:29:31 tornado.access WARNING web.py log_request 1948 405 GET /proxy (127.0.0.1) 0.90ms
+09-05 14:29:41 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 23 
+09-05 14:29:41 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '0', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:9090', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'Postman-Token': 'b20c91ae-5a1c-71cd-c9a1-1d9cf785150e'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 24, in post
+    data_json = escape.json_decode(self.request.body)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 14:29:41 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 13.58ms
+09-05 14:30:31 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 14:30:33 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 23 
+09-05 14:30:33 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '0', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:9090', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'Postman-Token': '68b98717-f89a-f047-0941-da171afc26e5'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 26, in post
+    return self.write(json.dumps((res),default=json_util.default))
+NameError: global name 'json' is not defined
+09-05 14:30:33 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 8.95ms
+09-05 14:30:42 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 14:30:45 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 14:31:00 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 14:31:02 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 
+09-05 14:31:02 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 9.90ms
+09-05 14:31:41 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 config=1&action=2
+09-05 14:31:41 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '17', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:9090', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '92c05fc1-263d-a745-1b84-dd193fb9e3ee'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 29, in post
+    data_json = escape.json_decode(self.request.body)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 14:31:41 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 19.22ms
+09-05 14:32:45 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 config=1&action=2
+09-05 14:32:45 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '17', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '88e42fc7-5c93-921e-1af7-4ce84a1413be'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 29, in post
+    data_json = escape.json_decode(self.request.body)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 14:32:45 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 9.99ms
+09-05 14:34:44 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 config=%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D&action=%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D
+09-05 14:34:44 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '277', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': 'b67afc5a-0d23-9fe2-5f8c-6fca642cb26d'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 29, in post
+    data_json = escape.json_decode(self.request.body)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 14:34:44 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 9.71ms
+09-05 14:36:06 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 ------WebKitFormBoundaryy8k52EJHCuFc3HJO
+Content-Disposition: form-data; name="config"
+
+{"engine":"mysql","host":"127.0.0.1", "port":3306,"user":"puppy","passwd":"puppy","schema":"web_monitor"}
+------WebKitFormBoundaryy8k52EJHCuFc3HJO
+Content-Disposition: form-data; name="action"
+
+{"command":"select","data":"select * from tb_i_task limit 2"}
+------WebKitFormBoundaryy8k52EJHCuFc3HJO--
+
+09-05 14:36:06 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '396', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryy8k52EJHCuFc3HJO', 'Postman-Token': '1c01d9a0-eaf4-f603-2f4c-db28a7da53b3'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 29, in post
+    data_json = escape.json_decode(self.request.body)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 14:36:06 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 8.05ms
+09-05 14:36:28 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 config=%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D&action=%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D
+09-05 14:36:28 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '277', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': 'ab23d6b0-32e4-daf0-5ea5-9d054491f5a2'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 29, in post
+    data_json = escape.json_decode(self.request.body)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 14:36:28 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 3.52ms
+09-05 14:38:37 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 14:38:39 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 config=%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D&action=%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D
+09-05 14:38:39 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '277', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': 'b60852d7-6cab-24c4-af42-289c8edf2746'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 34, in post
+    res = AgentCtrl.process(config, action)
+TypeError: unbound method process() must be called with AgentCtrl instance as first argument (got unicode instance instead)
+09-05 14:38:39 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 13.16ms
+09-05 14:39:22 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 14:39:24 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 25 config=%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D&action=%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D
+09-05 14:39:24 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '277', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '4d9aec64-f9b7-1ccd-72e3-7f6eeb61ccef'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 34, in post
+    agent_ctrl = AgentCtrl(config)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 22, in __init__
+    agentHandler = self.agents.get(config['engine'], "")
+TypeError: string indices must be integers
+09-05 14:39:24 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 9.96ms
+09-05 14:40:46 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/controllers/agentCtrl.py modified; restarting server
+09-05 16:57:55 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 25 config=%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D&action=%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D
+09-05 16:57:55 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '277', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': 'a036c257-62d1-e398-6aa3-8f4e88af5bde'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 34, in post
+    agent_ctrl = AgentCtrl(config)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 22, in __init__
+    agentHandler = self.agents.get(config['engine'], "")
+TypeError: string indices must be integers
+09-05 16:57:55 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 11.24ms
+09-05 17:01:03 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 25 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 17:01:03 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 13.43ms
+09-05 17:01:45 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 17:01:48 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 23 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 17:01:48 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '306', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '9373d6cb-ee93-94f1-ffe7-fc6db968031d'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 27, in post
+    data_json = escape.json_decode(self.request.body)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 17:01:48 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 23.07ms
+09-05 17:02:08 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 17:02:28 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 23 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 17:02:28 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '306', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': 'cc1a6d04-259b-ddc8-6029-96910d8633c5'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 27, in post
+    data_json = escape.json_decode(self.request.body)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 17:02:28 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 13.36ms
+09-05 17:03:18 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 17:05:08 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 17:06:40 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 28 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 17:06:40 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '306', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '034d5298-f000-e325-5fd6-43b8e9830a55'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 40, in post
+    res = AgentCtrl.process(config, action)
+TypeError: unbound method process() must be called with AgentCtrl instance as first argument (got dict instance instead)
+09-05 17:06:40 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 13.36ms
+09-05 17:07:24 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 17:07:28 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 17:07:33 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 28 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 17:07:33 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '306', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '17a1e04a-d10a-691f-a1fa-1e424440c5f5'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 42, in post
+    return self.write(json.dumps((res),default=json_util.default))
+NameError: global name 'json' is not defined
+09-05 17:07:33 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 210.91ms
+09-05 17:07:48 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 17:07:50 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 29 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 17:07:50 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '306', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '9b6cfd0d-5a3b-1cba-21eb-51a0576451a3'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 43, in post
+    return self.write(json.dumps((res),default=json_util.default))
+NameError: global name 'json_util' is not defined
+09-05 17:07:50 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 51.49ms
+09-05 17:08:00 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 17:08:03 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 17:08:03 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 37.54ms
+09-05 17:35:23 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/redisAgent.py modified; restarting server
+09-05 18:35:17 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:35:17 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 115.33ms
+09-05 18:36:30 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:30 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 47.72ms
+09-05 18:36:31 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:31 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 20.28ms
+09-05 18:36:31 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:31 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 17.59ms
+09-05 18:36:32 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:32 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 8.74ms
+09-05 18:36:32 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:32 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 13.35ms
+09-05 18:36:32 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:32 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 5.58ms
+09-05 18:36:33 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:33 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 4.31ms
+09-05 18:36:33 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:33 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 8.38ms
+09-05 18:36:34 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A3306%2C%22user%22%3A%22puppy%22%2C%22passwd%22%3A%22puppy%22%2C%22schema%22%3A%22web_monitor%22%7D%2C%22action%22%3A%7B%22command%22%3A%22select%22%2C%22data%22%3A%22select+*+from+tb_i_task+limit+2%22%7D%7D
+09-05 18:36:34 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 3.52ms
+09-05 18:37:13 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22redis%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22get%22%2C%22data%22%3A%22test%22%7D%7D
+09-05 18:37:13 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 31.36ms
+09-05 18:37:44 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22redis%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hset%22%2C%22data%22%3A%22myhash+1+first%22%7D%7D
+09-05 18:37:44 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 5.20ms
+09-05 18:38:03 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22redis%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hset%22%2C%22data%22%3A%22myhash+2+second%22%7D%7D
+09-05 18:38:03 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 3.84ms
+09-05 18:38:18 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22redis%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 18:38:18 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 6.10ms
+09-05 18:41:13 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22123%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 18:41:13 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '189', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': 'd1cbf132-43d2-e574-4fb8-16327670c279'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 42, in post
+    agent_ctrl = AgentCtrl(config)
+TypeError: __init__() should return None, not 'dict'
+09-05 18:41:13 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 25.01ms
+09-05 18:42:18 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/controllers/agentCtrl.py modified; restarting server
+09-05 18:42:25 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/controllers/agentCtrl.py modified; restarting server
+09-05 18:42:35 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 30 data=%7B%22config%22%3A%7B%22engine%22%3A%22123%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 18:42:35 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '189', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': 'afaa8d2f-dfb1-a045-2a01-41c50b03aaea'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 42, in post
+    agent_ctrl = AgentCtrl(config)
+TypeError: __init__() should return None, not 'dict'
+09-05 18:42:35 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 13.01ms
+09-05 18:44:45 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/controllers/agentCtrl.py modified; restarting server
+09-05 18:45:29 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 18:45:38 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 18:46:07 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 18:47:28 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22123%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 18:47:28 /Users/dung/work/goodman/apps/proxy.pyc WARNING proxy.py return_err 25 errno:2000
+09-05 18:47:28 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '189', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '7b89101f-fb5c-d15a-0d33-c70f9e1f32e2'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 47, in post
+    res = agent_ctrl.process(action)
+UnboundLocalError: local variable 'agent_ctrl' referenced before assignment
+09-05 18:47:28 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 9.08ms
+09-05 18:48:18 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/apps/proxy.py modified; restarting server
+09-05 18:48:22 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22123%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 18:48:22 /Users/dung/work/goodman/apps/proxy.py WARNING proxy.py return_err 25 errno:2000
+09-05 18:48:22 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 4.81ms
+09-05 18:48:32 /Users/dung/work/goodman/apps/proxy.py DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 18:48:32 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '191', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '093bf94d-c4c1-6da1-9b07-b51a57fefb1e'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 26, in __init__
+    self.agent = agentHandler(config)
+  File "/Users/dung/work/goodman/lib/agents/mysqlAgent.py", line 15, in __init__
+    'user'], passwd=config['passwd'], db=config['schema'], charset=config.get('charset', 'utf8'), conv=conv)
+KeyError: 'user'
+09-05 18:48:32 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 17.28ms
+09-05 18:50:05 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/mysqlAgent.py modified; restarting server
+09-05 18:50:10 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/mysqlAgent.py modified; restarting server
+09-05 18:50:14 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/mysqlAgent.py modified; restarting server
+09-05 18:50:16 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 19:02:07 tornado.application ERROR http1connection.py __exit__ 54 Uncaught exception
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 2024, in finish
+    self.execute()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 2057, in execute
+    **self.path_kwargs)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/gen.py", line 282, in wrapper
+    yielded = next(result)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+KeyboardInterrupt
+09-05 19:02:07 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 19:02:07 tornado.application ERROR http1connection.py __exit__ 54 Uncaught exception
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 2024, in finish
+    self.execute()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 2057, in execute
+    **self.path_kwargs)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/gen.py", line 282, in wrapper
+    yielded = next(result)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+KeyboardInterrupt
+09-05 19:02:36 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 19:04:01 tornado.application ERROR http1connection.py __exit__ 54 Uncaught exception
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/http1connection.py", line 238, in _read_message
+    delegate.finish()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/httpserver.py", line 289, in finish
+    self.delegate.finish()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 2024, in finish
+    self.execute()
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 2057, in execute
+    **self.path_kwargs)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/gen.py", line 282, in wrapper
+    yielded = next(result)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+KeyboardInterrupt
+09-05 19:04:01 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/mysqlAgent.py modified; restarting server
+09-05 19:04:13 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 19:04:16 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '191', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '31f2807a-c16d-effc-2cd0-67417197b142'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 26, in __init__
+    self.agent = agentHandler(config)
+  File "/Users/dung/work/goodman/lib/agents/mysqlAgent.py", line 14, in __init__
+    'user', 'root'), passwd=config.get('passwd', 'root'), db=config.get('schema', 'testdb'), charset=config.get('charset', 'utf8'), conv=conv)
+  File "build/bdist.macosx-10.10-intel/egg/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "build/bdist.macosx-10.10-intel/egg/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2013, "Lost connection to MySQL server at 'waiting for initial communication packet', system error: 60")
+09-05 19:04:16 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 2052.43ms
+09-05 19:04:47 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 19:04:49 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '191', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '316a3158-856e-d9c7-68d3-d6faeb1f4adc'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 26, in __init__
+    self.agent = agentHandler(config)
+  File "/Users/dung/work/goodman/lib/agents/mysqlAgent.py", line 14, in __init__
+    'user', 'root'), passwd=config.get('passwd', 'root'), db=config.get('schema', 'testdb'), charset=config.get('charset', 'utf8'), conv=conv)
+  File "build/bdist.macosx-10.10-intel/egg/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "build/bdist.macosx-10.10-intel/egg/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2013, "Lost connection to MySQL server at 'waiting for initial communication packet', system error: 60")
+09-05 19:04:49 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 2011.09ms
+09-05 19:04:59 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22redis%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 19:04:59 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 8.67ms
+09-05 19:05:38 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22mysql%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A6379%7D%2C%22action%22%3A%7B%22command%22%3A%22hgetall%22%2C%22data%22%3A%22myhash%22%7D%7D
+09-05 19:05:40 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '191', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '14e3f0d5-93c1-b40e-2065-be0ab01756de'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 26, in __init__
+    self.agent = agentHandler(config)
+  File "/Users/dung/work/goodman/lib/agents/mysqlAgent.py", line 14, in __init__
+    'user', 'root'), passwd=config.get('passwd', 'root'), db=config.get('schema', 'testdb'), charset=config.get('charset', 'utf8'), conv=conv)
+  File "build/bdist.macosx-10.10-intel/egg/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "build/bdist.macosx-10.10-intel/egg/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2013, "Lost connection to MySQL server at 'waiting for initial communication packet', system error: 60")
+09-05 19:05:40 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 2008.62ms
+09-05 19:11:52 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/memcacheAgent.py modified; restarting server
+09-05 19:11:55 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/memcacheAgent.py modified; restarting server
+09-05 19:12:33 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/redisAgent.py modified; restarting server
+09-05 19:12:37 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/redisAgent.py modified; restarting server
+09-05 19:12:40 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/redisAgent.py modified; restarting server
+09-05 19:12:54 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/memcacheAgent.py modified; restarting server
+09-05 19:15:15 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22memcache%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A11211%7D%2C%22action%22%3A%7B%22command%22%3A%22stats%22%2C%22data%22%3A%22%22%7D%7D
+09-05 19:15:15 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '187', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': 'c0662f42-d8c2-7e47-5436-08968db1c674'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 45, in post
+    res = agent_ctrl.process(action)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 30, in process
+    res = self.agent.do_transaction(action)
+  File "/Users/dung/work/goodman/lib/agents/memcacheAgent.py", line 21, in do_transaction
+    res = getattr(self.client,command)(*value_list)
+AttributeError: 'MemcacheAgent' object has no attribute 'client'
+09-05 19:15:15 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 22.43ms
+09-05 19:15:29 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/memcacheAgent.py modified; restarting server
+09-05 19:15:34 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22memcache%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A11211%7D%2C%22action%22%3A%7B%22command%22%3A%22stats%22%2C%22data%22%3A%22%22%7D%7D
+09-05 19:15:34 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop', 'Content-Length': '187', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36', 'Host': '127.0.0.1:9090', 'Cache-Control': 'no-cache', 'Content-Type': 'application/x-www-form-urlencoded', 'Postman-Token': '06487c6b-8750-2059-85cb-626a17405608'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 45, in post
+    res = agent_ctrl.process(action)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 30, in process
+    res = self.agent.do_transaction(action)
+  File "/Users/dung/work/goodman/lib/agents/memcacheAgent.py", line 21, in do_transaction
+    res = getattr(self.client,command)(*value_list)
+TypeError: 'dict' object is not callable
+09-05 19:15:34 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 20.34ms
+09-05 19:16:36 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22memcache%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A11211%7D%2C%22action%22%3A%7B%22command%22%3A%22get_stats%22%2C%22data%22%3A%22%22%7D%7D
+09-05 19:16:37 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 47.80ms
+09-05 19:17:08 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22memcache%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A11211%7D%2C%22action%22%3A%7B%22command%22%3A%22set%22%2C%22data%22%3A%22test+bbb%22%7D%7D
+09-05 19:17:08 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 5.76ms
+09-05 19:17:21 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22engine%22%3A%22memcache%22%2C%22host%22%3A%22127.0.0.1%22%2C+%22port%22%3A11211%7D%2C%22action%22%3A%7B%22command%22%3A%22get%22%2C%22data%22%3A%22test%22%7D%7D
+09-05 19:17:21 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 2.99ms
+09-05 19:17:31 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/memcacheAgent.py modified; restarting server
+09-05 20:56:17 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data%5Bconfig%5D%5Bhost%5D=127.0.0.1&data%5Bconfig%5D%5Bport%5D=11211&data%5Bconfig%5D%5Bengine%5D=memcache&data%5Baction%5D%5Bcommand%5D=get&data%5Baction%5D%5Bdata%5D=test
+09-05 20:56:18 /Users/dung/work/goodman/apps/proxy.pyc WARNING proxy.py return_err 25 errno:9001
+09-05 20:56:18 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '173', 'User-Agent': 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.6.22'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 37, in post
+    data_json = escape.json_decode(data)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 20:56:18 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 26.77ms
+09-05 20:56:18 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data%5Bconfig%5D%5Bhost%5D=127.0.0.1&data%5Bconfig%5D%5Bport%5D=11211&data%5Bconfig%5D%5Bengine%5D=memcache&data%5Baction%5D%5Bcommand%5D=get&data%5Baction%5D%5Bdata%5D=test
+09-05 20:56:18 /Users/dung/work/goodman/apps/proxy.pyc WARNING proxy.py return_err 25 errno:9001
+09-05 20:56:18 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '173', 'User-Agent': 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.6.22'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 37, in post
+    data_json = escape.json_decode(data)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 20:56:18 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 4.58ms
+09-05 20:57:11 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data%5Bconfig%5D%5Bhost%5D=127.0.0.1&data%5Bconfig%5D%5Bport%5D=11211&data%5Bconfig%5D%5Bengine%5D=memcache&data%5Baction%5D%5Bcommand%5D=get&data%5Baction%5D%5Bdata%5D=test
+09-05 20:57:11 /Users/dung/work/goodman/apps/proxy.pyc WARNING proxy.py return_err 25 errno:9001
+09-05 20:57:11 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '173', 'User-Agent': 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.6.22'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 37, in post
+    data_json = escape.json_decode(data)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 20:57:11 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 8.95ms
+09-05 20:57:11 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data%5Bconfig%5D%5Bhost%5D=127.0.0.1&data%5Bconfig%5D%5Bport%5D=11211&data%5Bconfig%5D%5Bengine%5D=memcache&data%5Baction%5D%5Bcommand%5D=get&data%5Baction%5D%5Bdata%5D=test
+09-05 20:57:11 /Users/dung/work/goodman/apps/proxy.pyc WARNING proxy.py return_err 25 errno:9001
+09-05 20:57:11 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '173', 'User-Agent': 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.6.22'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 37, in post
+    data_json = escape.json_decode(data)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 20:57:11 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 4.03ms
+09-05 20:57:17 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data%5Bconfig%5D%5Bhost%5D=127.0.0.1&data%5Bconfig%5D%5Bport%5D=11211&data%5Bconfig%5D%5Bengine%5D=memcache&data%5Baction%5D%5Bcommand%5D=get&data%5Baction%5D%5Bdata%5D=test
+09-05 20:57:17 /Users/dung/work/goodman/apps/proxy.pyc WARNING proxy.py return_err 25 errno:9001
+09-05 20:57:17 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '173', 'User-Agent': 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.6.22'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 37, in post
+    data_json = escape.json_decode(data)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 20:57:17 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 4.41ms
+09-05 20:57:17 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data%5Bconfig%5D%5Bhost%5D=127.0.0.1&data%5Bconfig%5D%5Bport%5D=11211&data%5Bconfig%5D%5Bengine%5D=memcache&data%5Baction%5D%5Bcommand%5D=get&data%5Baction%5D%5Bdata%5D=test
+09-05 20:57:17 /Users/dung/work/goodman/apps/proxy.pyc WARNING proxy.py return_err 25 errno:9001
+09-05 20:57:17 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '173', 'User-Agent': 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.6.22'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 37, in post
+    data_json = escape.json_decode(data)
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/escape.py", line 93, in json_decode
+    return json.loads(to_basestring(value))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+09-05 20:57:17 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 2.91ms
+09-05 20:59:55 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22host%22%3A%22127.0.0.1%22%2C%22port%22%3A11211%2C%22engine%22%3A%22memcache%22%7D%2C%22action%22%3A%7B%22command%22%3A%22get%22%2C%22data%22%3A%22test%22%7D%7D
+09-05 20:59:55 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 62.83ms
+09-05 20:59:55 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22host%22%3A%22127.0.0.1%22%2C%22port%22%3A11211%2C%22engine%22%3A%22memcache%22%7D%2C%22action%22%3A%7B%22command%22%3A%22get%22%2C%22data%22%3A%22test%22%7D%7D
+09-05 20:59:55 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 4.38ms
+09-05 21:01:20 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22host%22%3A%22127.0.0.1%22%2C%22port%22%3A%2211211%22%2C%22engine%22%3A%22memcache%22%7D%2C%22action%22%3A%7B%22command%22%3A%22get%22%2C%22data%22%3A%22test%22%7D%7D
+09-05 21:01:20 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '194', 'User-Agent': 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.6.22'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 26, in __init__
+    self.agent = agentHandler(config)
+  File "/Users/dung/work/goodman/lib/agents/memcacheAgent.py", line 11, in __init__
+    con_str = "%s:%d" % (config.get('host','127.0.0.1'), config.get('port',11211))
+TypeError: %d format: a number is required, not unicode
+09-05 21:01:20 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 11.41ms
+09-05 21:01:20 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22host%22%3A%22127.0.0.1%22%2C%22port%22%3A%2211211%22%2C%22engine%22%3A%22memcache%22%7D%2C%22action%22%3A%7B%22command%22%3A%22get%22%2C%22data%22%3A%22test%22%7D%7D
+09-05 21:01:20 tornado.application ERROR web.py log_exception 1526 Uncaught exception POST /proxy (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9090', method='POST', uri='/proxy', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:9090', 'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '194', 'User-Agent': 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.6.22'})
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/tornado-4.3b2-py2.7-macosx-10.10-intel.egg/tornado/web.py", line 1445, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/dung/work/goodman/apps/proxy.py", line 44, in post
+    agent_ctrl = AgentCtrl(config)
+  File "/Users/dung/work/goodman/controllers/agentCtrl.py", line 26, in __init__
+    self.agent = agentHandler(config)
+  File "/Users/dung/work/goodman/lib/agents/memcacheAgent.py", line 11, in __init__
+    con_str = "%s:%d" % (config.get('host','127.0.0.1'), config.get('port',11211))
+TypeError: %d format: a number is required, not unicode
+09-05 21:01:20 tornado.access ERROR web.py log_request 1948 500 POST /proxy (127.0.0.1) 2.00ms
+09-05 21:02:45 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/memcacheAgent.py modified; restarting server
+09-05 21:03:02 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/mysqlAgent.py modified; restarting server
+09-05 21:03:14 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/redisAgent.py modified; restarting server
+09-05 21:03:16 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/redisAgent.py modified; restarting server
+09-05 21:03:17 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22host%22%3A%22127.0.0.1%22%2C%22port%22%3A%2211211%22%2C%22engine%22%3A%22memcache%22%7D%2C%22action%22%3A%7B%22command%22%3A%22get%22%2C%22data%22%3A%22test%22%7D%7D
+09-05 21:03:17 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 40.65ms
+09-05 21:03:18 /Users/dung/work/goodman/apps/proxy.pyc DEBUG proxy.py post 31 data=%7B%22config%22%3A%7B%22host%22%3A%22127.0.0.1%22%2C%22port%22%3A%2211211%22%2C%22engine%22%3A%22memcache%22%7D%2C%22action%22%3A%7B%22command%22%3A%22get%22%2C%22data%22%3A%22test%22%7D%7D
+09-05 21:03:18 tornado.access INFO web.py log_request 1948 200 POST /proxy (127.0.0.1) 5.80ms
+09-05 21:03:32 tornado.general INFO autoreload.py _check_file 204 /Users/dung/work/goodman/lib/agents/redisAgent.py modified; restarting server
