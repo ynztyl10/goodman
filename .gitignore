@@ -1,4 +1,4 @@
-.pyc
-.log
-.out
-.rdb
+*.pyc
+*.log
+*.out
+*.rdb
