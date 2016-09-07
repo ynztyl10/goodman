@@ -45,9 +45,6 @@ class ProxyHandler(web.RequestHandler):
         try:
             agent_ctrl = AgentCtrl(config)
             res = agent_ctrl.process(action)
-            if not res:
-                logger.warning("res is false!")
-                self.return_err(PARAMS_NULL)
             res = {"errno" : SUCCESS,"data": res}
             return self.write(json.dumps((res),default=json_util.default))
         except UnSupportedEngineException,e:

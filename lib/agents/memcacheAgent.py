@@ -1,7 +1,7 @@
 # coding=utf-8
-
+import logging
 from lib.memcache import Client
-
+logger = logging.getLogger(__file__)
 
 
 
@@ -18,6 +18,7 @@ class MemcacheAgent(object):
     def do_transaction(self, action):
         command = action['command']
         value_list = action['data'].split()
+        logger.debug(value_list)
         res = getattr(self.client,command)(*value_list)
         if not res:
             return False
