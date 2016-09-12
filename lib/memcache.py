@@ -1244,6 +1244,7 @@ class Client(threading.local):
             line = server.readline(raise_exception)
 
         if line and line[:5] == b'VALUE':
+            print line
             resp, rkey, flags, len = line.split()
             flags = int(flags)
             rlen = int(len)
