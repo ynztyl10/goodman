@@ -1244,7 +1244,6 @@ class Client(threading.local):
             line = server.readline(raise_exception)
 
         if line and line[:5] == b'VALUE':
-            print line
             resp, rkey, flags, len = line.split()
             flags = int(flags)
             rlen = int(len)
@@ -1266,19 +1265,19 @@ class Client(threading.local):
             buf = self.decompressor(buf)
             flags &= ~Client._FLAG_COMPRESSED
 
-        if flags == 0:
+        if flags == 0 or flags == 4:
             # Bare string
             if six.PY3:
                 val = buf.decode('utf8')
             else:
                 val = buf
-        elif flags & Client._FLAG_INTEGER:
-            val = int(buf)
-        elif flags & Client._FLAG_LONG:
-            if six.PY3:
-                val = int(buf)
-            else:
-                val = long(buf)
+        # elif flags & Client._FLAG_INTEGER:
+        #     val = int(buf)
+        # elif flags & Client._FLAG_LONG:
+        #     if six.PY3:
+        #         val = int(buf)
+        #     else:
+        #         val = long(buf)
         elif flags & Client._FLAG_PICKLE:
             try:
                 file = BytesIO(buf)
