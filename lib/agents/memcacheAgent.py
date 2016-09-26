@@ -26,12 +26,15 @@ class MemcacheAgent(object):
         value_list = action['data'].split()
         logger.debug(value_list)
         value_list = self.format(command,value_list)
-        res = getattr(self.client,command)(*value_list)
-        if not res:
-            return False
-        out = self.format(command,res)
-        logger.debug(out)
-        return out
+        try:
+            res = getattr(self.client,command)(*value_list)
+            if not res:
+                return False
+            out = self.format(command,res)
+            logger.debug(out)
+            return out
+        except Exception,e:
+            return {"error":e}
         
 
     def format(self,command,value_list):

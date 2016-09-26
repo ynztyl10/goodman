@@ -25,10 +25,13 @@ class MysqlAgent(object):
     def do_transaction(self, action):
         with self.connect:
             self.cursor = self.connect.cursor()
-            res = self.cursor.execute(action['data'])
-            if not res:
-                return False
-            return self.dict_fetchall(self.cursor)
+            try:
+                res = self.cursor.execute(action['data'])
+                if not res:
+                    return False
+                return self.dict_fetchall(self.cursor)
+            except Exception,e:
+                return {"error":e}
 
     def destory(self):
         pass
