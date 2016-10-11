@@ -34,7 +34,7 @@ class MemcacheAgent(object):
             logger.debug(out)
             return out
         except Exception,e:
-            return {"error":e}
+            return {"error":str(e)}
         
 
     def format(self,command,value_list):

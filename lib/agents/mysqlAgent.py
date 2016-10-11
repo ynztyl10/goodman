@@ -31,7 +31,7 @@ class MysqlAgent(object):
                     return False
                 return self.dict_fetchall(self.cursor)
             except Exception,e:
-                return {"error":e}
+                return {"error":str(e)}
 
     def destory(self):
         pass

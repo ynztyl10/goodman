@@ -1,5 +1,7 @@
 # coding=utf-8
 import redis
+import json
+import logging
 
 # config = {
 #     "host":"127.0.0.1",
@@ -10,7 +12,7 @@ import redis
 #     "command" : "get",
 #     "data" : "test"
 # }
-
+logger = logging.getLogger(__file__)
 class RedisAgent(object):
 
     def __init__(self, config):
@@ -23,7 +25,9 @@ class RedisAgent(object):
 
     def do_transaction(self, action):
         command = action['command']
-        value_list = action['data'].split()
+        key = action['data'].split()[0]
+        values = " ".join(action['data'].split()[1:])
+        value_list = self.format_values(key, values)
         res = getattr(self.client,command)(*value_list)
         if not res:
             return False
@@ -31,6 +35,17 @@ class RedisAgent(object):
 
     def destory(self):
         pass
+
+    def format_values(self, key, values):
+        value_list = [key]
+        try:
+            value_json = json.loads(values)
+            value_list.append(value_json)
+        except Exception, e:
+            logger.debug("not a json str, use split")
+            value_list = value_list + values.split()
+        return value_list
+            
 
 # if __name__ == '__main__':
 #     r = RedisAgent(config)
