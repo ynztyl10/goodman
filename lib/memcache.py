@@ -971,6 +971,7 @@ class Client(threading.local):
         if isinstance(val, six.binary_type):
             pass
         elif isinstance(val, six.text_type):
+            flags |= Client._FLAG_LONG  #php memcache compatibility
             val = val.encode('utf-8')
         elif isinstance(val, int):
             flags |= Client._FLAG_INTEGER
