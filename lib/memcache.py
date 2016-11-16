@@ -1262,7 +1262,7 @@ class Client(threading.local):
         if len(buf) == rlen:
             buf = buf[:-2]  # strip \r\n
 
-        if flags & Client._FLAG_COMPRESSED or flags == 84:
+        if flags & Client._FLAG_COMPRESSED:
             buf = self.decompressor(buf)
             flags &= ~Client._FLAG_COMPRESSED
 
