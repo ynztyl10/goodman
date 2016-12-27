@@ -55,6 +55,7 @@ import sys
 import threading
 import time
 import zlib
+import fastlz
 
 import six
 
@@ -148,6 +149,8 @@ class Client(threading.local):
     _FLAG_INTEGER = 1 << 1
     _FLAG_LONG = 1 << 2
     _FLAG_COMPRESSED = 1 << 3
+    _FASTLZ_COMPRESSED = 84
+    _FLAG_INTEGER_PHP = 4
 
     _SERVER_RETRIES = 10  # how many times to try finding a free server.
 
@@ -1266,7 +1269,11 @@ class Client(threading.local):
             buf = self.decompressor(buf)
             flags &= ~Client._FLAG_COMPRESSED
 
-        if flags == 0 or flags == 4:
+        if flags == Client._FASTLZ_COMPRESSED:
+            self.decompressor = fastlz.decompress
+            buf = self.decompressor(buf)
+
+        if flags == 0 or flags == Client._FLAG_INTEGER_PHP or flags == Client._FASTLZ_COMPRESSED:
             # Bare string
             if six.PY3:
                 val = buf.decode('utf8')
