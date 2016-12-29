@@ -71,8 +71,13 @@ class MemcacheAgent(object):
     def format_storage_commands_list(self,value_list):
         try:
             json_data = json.loads(value_list[-1])
-            phpse_data = phpse.dumps(json_data)
-            value_list[-1] = phpse_data
+            if isinstance(json_data, dict) or isinstance(json_data, list):
+                phpse_data = phpse.dumps(json_data)
+                value_list[-1] = phpse_data
+                time = 0
+                min_compress_len = 1
+                value_list.append(time)
+                value_list.append(min_compress_len)
             return value_list
         except Exception, e:
             logger.warning(e)

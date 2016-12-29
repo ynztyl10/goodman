@@ -3,7 +3,6 @@
 from tornado import web,escape
 import logging
 import json
-from bson import json_util
 from lib.constants import *
 from lib.exceptions import UnSupportedEngineException
 from controllers.errorCtrl import ErrorCtrl
@@ -24,7 +23,7 @@ class ProxyHandler(web.RequestHandler):
     def return_err(self,errno):
         logger.warning('errno:%d',errno)
         res = ErrorCtrl.get_error(errno)
-        return self.write(json.dumps((res),default=json_util.default))
+        return self.write(json.dumps(res))
 
     def post(self):
         self.set_crx_headers()
@@ -46,7 +45,7 @@ class ProxyHandler(web.RequestHandler):
             agent_ctrl = AgentCtrl(config)
             res = agent_ctrl.process(action)
             res = {"errno" : SUCCESS,"data": res}
-            return self.write(json.dumps((res),default=json_util.default))
+            return self.write(json.dumps(res))
         except UnSupportedEngineException,e:
             logger.warning(e)
             self.return_err(ENGINE_NOT_SUPPORT)

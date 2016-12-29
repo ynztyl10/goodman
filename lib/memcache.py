@@ -1006,12 +1006,13 @@ class Client(threading.local):
         # We should try to compress if min_compress_len > 0
         # and this string is longer than our min threshold.
         if min_compress_len and lv > min_compress_len:
+            self.compressor = fastlz.compress
             comp_val = self.compressor(val)
             # Only retain the result if the compression result is smaller
             # than the original.
-            if len(comp_val) < lv:
-                flags |= Client._FLAG_COMPRESSED
-                val = comp_val
+            #if len(comp_val) < lv:
+            flags |= Client._FASTLZ_COMPRESSED
+            val = comp_val
 
         #  silently do not store if value length exceeds maximum
         if (self.server_max_value_length != 0 and
