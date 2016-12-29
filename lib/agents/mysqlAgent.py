@@ -12,7 +12,7 @@ class MysqlAgent(object):
         conv = converters.conversions.copy()
         conv[246] = float    # convert decimals to floats
         conv[12] = str       # convert datetime to strings
-        self.connect = MySQLdb.connect(threadsafety=2,connect_timeout=20,host=config.get('host', '127.0.0.1'), port=int(config.get('port', 3306)), user=config.get(
+        self.connect = MySQLdb.connect(connect_timeout=20,host=config.get('host', '127.0.0.1'), port=int(config.get('port', 3306)), user=config.get(
             'user', 'root'), passwd=config.get('passwd', 'root'), db=config.get('schema', 'testdb'), charset=config.get('charset', 'utf8'), conv=conv)
 
     def init(self):

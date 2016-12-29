@@ -2,7 +2,7 @@
 import redis
 import json
 import logging
-
+from lib.constants import DATA_SEPERATOR
 # config = {
 #     "host":"127.0.0.1",
 #     "port":6379
@@ -26,7 +26,7 @@ class RedisAgent(object):
     def do_transaction(self, action):
         command = action['command']
         key = action['data'].split()[0]
-        values = " ".join(action['data'].split()[1:])
+        values = " ".join(action['data'].split(DATA_SEPERATOR)[1:])
         value_list = self.format_values(key, values)
         res = getattr(self.client,command)(*value_list)
         if not res:

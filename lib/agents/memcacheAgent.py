@@ -3,6 +3,7 @@ import logging
 from lib.memcache import Client
 import phpserialize as phpse
 import json
+from lib.constants import DATA_SEPERATOR
 logger = logging.getLogger(__file__)
 
 
@@ -23,7 +24,7 @@ class MemcacheAgent(object):
 
     def do_transaction(self, action):
         command = action['command']
-        value_list = action['data'].split()
+        value_list = action['data'].split(DATA_SEPERATOR)
         logger.debug(value_list)
         value_list = self.format(command,value_list)
         try:
