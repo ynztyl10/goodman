@@ -25,7 +25,7 @@ class RedisAgent(object):
 
     def do_transaction(self, action):
         command = action['command']
-        key = action['data'].split()[0]
+        key = action['data'].split(DATA_SEPERATOR)[0]
         values = " ".join(action['data'].split(DATA_SEPERATOR)[1:])
         value_list = self.format_values(key, values)
         res = getattr(self.client,command)(*value_list)
