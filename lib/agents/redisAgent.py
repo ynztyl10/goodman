@@ -14,10 +14,9 @@ from lib.constants import DATA_SEPERATOR
 # }
 logger = logging.getLogger(__file__)
 class RedisAgent(object):
-
+    value_json_commands = ['hmset']
     def __init__(self, config):
-        logger.debug(config)
-        self.config = config
+        self.client = redis.StrictRedis(host=config['host'], port=int(config['port']), db=0, password=config.get('passwd',None))
 
 
     def init(self):
@@ -25,14 +24,12 @@ class RedisAgent(object):
 
 
     def do_transaction(self, action):
-        self.client = redis.StrictRedis(host=str(self.config['host']), port=int(self.config['port']), db=0)
         command = action['command']
         key = action['data'].split(DATA_SEPERATOR)[0]
         values = " ".join(action['data'].split(DATA_SEPERATOR)[1:])
-        value_list = self.format_values(key, values)
+        value_list = self.format_values(command, key, values)
         logger.debug(value_list)
         res = getattr(self.client,command)(*value_list)
-        logger.debug(res)
         if not res:
             return False
         return res
@@ -40,15 +37,14 @@ class RedisAgent(object):
     def destory(self):
         pass
 
-    def format_values(self, key, values):
+    def format_values(self, command, key, values):
         value_list = [key]
-        try:
+        if command in self.value_json_commands:
             value_json = json.loads(values)
             value_list.append(value_json)
-        except Exception, e:
+        else:
             logger.debug("not a json str, use split")
             value_list = value_list + values.split()
-        logger.debug(value_list)
         return value_list
             
 

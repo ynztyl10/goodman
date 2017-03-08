@@ -29,7 +29,6 @@ class MysqlAgent(object):
             with self.connect:
                 self.cursor = self.connect.cursor()
                 res = self.cursor.execute(action['data'])
-                logger.debug(action['data'])
                 if not res:
                     return False
                 return self.dict_fetchall(self.cursor)
