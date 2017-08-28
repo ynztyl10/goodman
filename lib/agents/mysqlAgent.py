@@ -9,9 +9,11 @@ logger = logging.getLogger(__file__)
 class MysqlAgent(object):
 
     def __init__(self, config):
+        logger.debug(config)
         conv = converters.conversions.copy()
         conv[246] = float    # convert decimals to floats
         conv[12] = str       # convert datetime to strings
+        conv[10] = str       # convert date to strings
         self.connect = MySQLdb.connect(connect_timeout=20,host=config.get('host', '127.0.0.1'), port=int(config.get('port', 3306)), user=config.get(
             'user', 'root'), passwd=config.get('passwd', 'root'), db=config.get('schema', 'testdb'), charset=config.get('charset', 'utf8'), conv=conv)
 
@@ -26,6 +28,7 @@ class MysqlAgent(object):
 
     def do_transaction(self, action):
         try:
+            logger.debug(action)
             with self.connect:
                 self.cursor = self.connect.cursor()
                 res = self.cursor.execute(action['data'])
