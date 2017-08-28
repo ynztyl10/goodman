@@ -51,7 +51,13 @@ class MemcacheAgent(object):
         if not data:
             return data
         try:
-            return phpse.loads(data)
+            logger.debug(data)
+            obj = phpse.loads(data, object_hook=phpse.phpobject)
+            for k,v in obj.items():
+                if isinstance(v, phpse.phpobject):
+                    v = v.__php_vars__
+                    obj[k] = v
+            return obj
         except Exception, e:
             logger.warning(e)
             return data
