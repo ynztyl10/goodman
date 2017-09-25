@@ -16,7 +16,7 @@ class MysqlAgent(object):
         conv[10] = str       # convert date to strings
         self.connect = MySQLdb.connect(connect_timeout=20,host=config.get('host', '127.0.0.1'), port=int(config.get('port', 3306)), user=config.get(
             'user', 'root'), passwd=config.get('passwd', 'root'), db=config.get('schema', 'testdb'), charset=config.get('charset', 'utf8'), conv=conv)
-
+        self.charset = config.get('charset', 'utf8')
     def init(self):
         pass
 
@@ -31,6 +31,7 @@ class MysqlAgent(object):
             logger.debug(action)
             with self.connect:
                 self.cursor = self.connect.cursor()
+                action['data'] = action['data'].encode('utf-8').decode(self.charset)
                 res = self.cursor.execute(action['data'])
                 if not res:
                     return False
